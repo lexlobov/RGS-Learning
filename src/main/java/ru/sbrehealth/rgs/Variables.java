@@ -91,6 +91,5 @@ public class Variables {
         t = 16;
         System.out.println(t);
 
-
     }
 }
