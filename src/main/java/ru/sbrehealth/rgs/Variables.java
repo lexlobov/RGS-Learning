@@ -3,7 +3,7 @@ package ru.sbrehealth.rgs;
 public class Variables {
 
     public static void main(String[] args) {
-        // Объявить переменную типа int, присвоить ей значение, вывести на экран в терминале
+        // Объявить переменную типа int, присвоить ей значение, вывести на экран в терминалеe
         int a;
         a = 5;
         System.out.println("int = " + a);
