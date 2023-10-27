@@ -1,14 +1,21 @@
 package ru.sberhealth.rgs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Methods {
 
     public static void main(String[] args) {
         // Вызываем метод, который складывает два числа, отдает сумму и печатает результат в консоль
         addTwoNumbers(1, 2);
+        int numberOne = 7;
+        int numberTwo = 9;
+        addTwoNumbers(numberOne, numberTwo);
+
 
         // Создаем переменную типа double, в которую помещаем результат работы метода, вычисляющего среднее значение
         // всех входящих в него аргументов, затем выводим на консоль среднее значение
-        double average = getAverage(13.5, 24.3, 10.4, 11.9);
+        double average = getAverage(13.5, 24.3, 10.4, 11.9, 98.8);
         System.out.println(average);
     }
 
