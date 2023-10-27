@@ -1,8 +1,6 @@
 package ru.sberhealth.rgs;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
 
 public class MethodsHomeWork{
 
@@ -14,14 +12,14 @@ public class MethodsHomeWork{
 
     public static String userDataGet(String name, int age){
 
-        String ageNamingType = "";
+        String ageNamingType;
         if (age <= 4){
             ageNamingType = " года!";
         } else if (age < 21){
             ageNamingType = " лет!";
         } else if (age == 21) {
             ageNamingType = " год!";
-        } else if (age >= 22 && age <= 24){ // не могу понять, почему ругается на условие. Кажется косяк с == на 22 строке
+        } else if (age >= 22 && age <= 24){ // Не могу понять, почему ругается на условие. Кажется косяк с == на 22 строке
             ageNamingType = " года!";
         } else {
             ageNamingType = " Годов, лет, зим -  Мне тупо надоело ифэлсить";
@@ -82,14 +80,15 @@ public class MethodsHomeWork{
     /*
         Создать метод, который принимает в себя аргумент типа String, в котором должно быть число с дробной частью, отделенной точкой, и возвращает его
         в виде округленного значения типа int. Вывести результат в консоль
+            // ту хуйня, не могу понять что не так делаю
     */
 
     // ту хуйня, не могу понять что не так делаю
-    public static void doubleRoundToInt(double newDouble){
+    public static void doubleRoundToInt(String newDouble){
 
-        double test = Math.round(newDouble);
-        int tests = (int) test;
-        System.out.println(tests);
+        double convertResult = Double.parseDouble(newDouble);
+        int finalResult = (int) convertResult;
+        System.out.println(finalResult);
     }
 
 

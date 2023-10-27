@@ -37,13 +37,13 @@ public class Main extends MethodsHomeWork{
 
         stringToDouble(valueOfLeatherBagInput);
 
-        /*
+
         // task 6
-        System.out.println("Enter double num");
-        Scanner getDouble = new Scanner(System.in);
-        double newDoubleInput = getDouble.nextDouble();
+        System.out.println("Enter double num: ");
+        Scanner getStringDoubleNum = new Scanner(System.in);
+        String newDoubleInput = getStringDoubleNum.nextLine();
         doubleRoundToInt(newDoubleInput);
-        */
+
 
         // task 7
         mathCumbackToSchool();
