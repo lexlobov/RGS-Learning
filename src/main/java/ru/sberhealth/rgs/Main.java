@@ -14,15 +14,15 @@ public class Main {
         System.out.println("Input your array length");
         int arrayLength = arrayScanner.nextInt();
 
-        Integer [] firstTaskErr = new Integer[arrayLength];
+        Integer [] firstTaskArr = new Integer[arrayLength];
         System.out.println("Enter your numbers");
 
         for (int i = 0; i < arrayLength; i++) {
-            firstTaskErr[i] = arrayScanner.nextInt();
+            firstTaskArr[i] = arrayScanner.nextInt();
 
         }
 
-        getFirstUserIntMassive(firstTaskErr);
+        getFirstUserIntMassive(firstTaskArr);
 
         // Создать метод, который принимает массив целых чисел и к каждому числу прибавляет предыдущее, затем возвращает массив с новыми значениями
         System.out.println("Input your second array length");
@@ -61,12 +61,12 @@ public class Main {
 
 
     // Создать метод, который принимает массив целых чисел и возвращает его в обратном порядке
-    public static String getFirstUserIntMassive(Integer[] firstTaskErr){
+    public static String getFirstUserIntMassive(Integer[] firstTaskArr){
 
 
-       System.out.println(Arrays.toString(firstTaskErr));
+       System.out.println(Arrays.toString(firstTaskArr));
 
-       List<Integer> list = Arrays.asList(firstTaskErr);
+       List<Integer> list = Arrays.asList(firstTaskArr);
        Collections.reverse(list);
 
        System.out.println(list);
@@ -76,35 +76,35 @@ public class Main {
 
 
     // Создать метод, который принимает массив целых чисел и к каждому числу прибавляет предыдущее, затем возвращает массив с новыми значениями
-    public static int[] getSecondUserIntMassive(int[] secondTaskErr){
+    public static int[] getSecondUserIntMassive(int[] secondTaskArr){
 
-        System.out.println(Arrays.toString(secondTaskErr));
+        System.out.println(Arrays.toString(secondTaskArr));
 
-        int [] errWithSum = new int[secondTaskErr.length];
-        errWithSum[0] = secondTaskErr[0];
+        int [] arrWithSum = new int[secondTaskArr.length];
+        arrWithSum[0] = secondTaskArr[0];
 
-        for (int i = 1; i < errWithSum.length; i++) {
+        for (int i = 1; i < arrWithSum.length; i++) {
 
-            errWithSum[i] = secondTaskErr[i] + secondTaskErr[i - 1];
+            arrWithSum[i] = secondTaskArr[i] + secondTaskArr[i - 1];
 
         }
 
-        System.out.println(Arrays.toString(errWithSum));
+        System.out.println(Arrays.toString(arrWithSum));
 
-    return errWithSum;
+    return arrWithSum;
     }
 
 
     // Создать метод, который принимает массив целых чисел, считает среднее арифметическое всех входящих элементов и возвращает ответ в виде целого числа
     // Результат должен быть округлен в большую сторону
-    public static double getThirdUserIntMassive(int[] thirdTaskErr){
+    public static double getThirdUserIntMassive(int[] thirdTaskArr){
 
-        System.out.println(Arrays.toString(thirdTaskErr));
+        System.out.println(Arrays.toString(thirdTaskArr));
 
-        double arrNumsSum = IntStream.of(thirdTaskErr).sum();
-        double errLength = thirdTaskErr.length;
+        double arrNumsSum = IntStream.of(thirdTaskArr).sum();
+        double arrLength = thirdTaskArr.length;
         // long arrNumsCount = IntStream.of(thirdTaskErr).count();
-        int avgOfErr = (int) Math.ceil(arrNumsSum / errLength);
+        int avgOfErr = (int) Math.ceil(arrNumsSum / arrLength);
 
         System.out.println(avgOfErr);
 
