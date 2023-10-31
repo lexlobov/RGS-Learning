@@ -41,4 +41,44 @@ public class Human {
                 ", profession='" + profession + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getHomeCountry() {
+        return homeCountry;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHomeCountry(String homeCountry) {
+        this.homeCountry = homeCountry;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
 }
