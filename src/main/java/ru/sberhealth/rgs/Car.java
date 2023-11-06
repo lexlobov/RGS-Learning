@@ -10,43 +10,43 @@ public class Car {
         public Car(String model, double horsePower){
             this.model = model;
             this.horsePower = horsePower;
-        };
+        }
 
-        public void setModel(String model){
+    public void setModel(String model){
             this.model = model;
-        };
+        }
 
         public void setHorsePower(double horsePower){
             this.horsePower = horsePower;
-    };
+    }
 
         public void setCarType(CarTypes carTypes){
             this.type = carTypes.getCarType();
-    };
+    }
 
         public void setWheels(int wheels){
             this.wheels = wheels;
-    };
+    }
 
         public String getModel(){
             return model;
-    };
+    }
 
         public double getHorsePower(){
             return horsePower;
-    };
+    }
 
         public String getCarType(){
             return type;
-    };
+    }
 
         public int getWheels(){
             return wheels;
-    };
+    }
 
         public Car(){
 
-        };
+        }
 
         @Override
         public String toString(){

@@ -40,6 +40,9 @@ public class HomeworkClassesFirst {
            carTwo.setWheels(myCarNumberOfWheels);
 
            System.out.println(carTwo);
+
+           System.out.println("First car type: " + carOne.getCarType() + "\n" +
+                              "Second car model: " + carTwo.getModel());
        }
 
 }
