@@ -1,6 +1,7 @@
 package ru.sberhealth.rgs;
 
 import java.util.Scanner;
+import ru.sberhealth.rgs.MyStaticMethods.*;
 
 public class HomeworkClassesFirst {
 
@@ -43,6 +44,9 @@ public class HomeworkClassesFirst {
 
            System.out.println("First car type: " + carOne.getCarType() + "\n" +
                               "Second car model: " + carTwo.getModel());
+
+
+           System.out.println(MyStaticMethods.getAvgResult());
        }
 
 }
