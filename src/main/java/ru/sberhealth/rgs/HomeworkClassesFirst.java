@@ -1,7 +1,6 @@
 package ru.sberhealth.rgs;
 
 import java.util.Scanner;
-import ru.sberhealth.rgs.MyStaticMethods.*;
 
 public class HomeworkClassesFirst {
 
@@ -17,17 +16,17 @@ public class HomeworkClassesFirst {
            // создаем новый экземпляр класса Авто
            Car carTwo = new Car();
 
-           // Запрашиваем ввод модели и сетаем ее в model класса Car
+           // Запрашиваем ввод модели и присваиваем ее в model класса Car
            System.out.println("Enter your car model: ");
            String myModel = scanner.nextLine();
            carTwo.setModel(myModel);
 
-           // Запрашиваем ввод лс и сетаем ее в horsePower класса Car
+           // Запрашиваем ввод лс и присваиваем ее в horsePower класса Car
            System.out.println("Enter your car Horse Power: ");
            double myCarHorsePower = scanner.nextDouble();
            carTwo.setHorsePower(myCarHorsePower);
 
-           // Запрашиваем ввод тип авто, в зависимости от ответа используем и сетаем тот или иной енам
+           // Запрашиваем ввод тип авто, в зависимости от ответа используем и присваиваем тот или иной enum
            System.out.println("Choose your car type: 1 for passenger, 2 for truck -  ");
            int myCarType = scanner.nextInt();
            if(myCarType == 1){
@@ -35,7 +34,7 @@ public class HomeworkClassesFirst {
            }else carTwo.setCarType(CarTypes.TRUCK);
 
 
-           // Запрашиваем ввод кол-ва колес авто и сетаем в wheels класса Car
+           // Запрашиваем ввод кол-ва колес авто и добавляем в wheels класса Car
            System.out.println("Enter the number of wheels of your car: ");
            int myCarNumberOfWheels = scanner.nextInt();
            carTwo.setWheels(myCarNumberOfWheels);
@@ -46,7 +45,14 @@ public class HomeworkClassesFirst {
                               "Second car model: " + carTwo.getModel());
 
 
-           System.out.println(MyStaticMethods.getAvgResult());
+           // метод получения среднего арифметического
+           System.out.println(MyStaticMethods.getAvg());
+
+           // метод объединения строк
+           System.out.println(MyStaticMethods.joinUserStrings());
+
+           // метод получения суммы входящих элементов (длины массива?)
+           System.out.println(MyStaticMethods.getSum());
        }
 
 }
