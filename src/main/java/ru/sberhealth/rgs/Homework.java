@@ -34,4 +34,21 @@ public class Homework {
         ;
         return (resultMassive);
     }
+
+    // Написать метод, который будет принимать в себя массив целых чисел в качестве аргумента, каждый второй элемент этого массива умножать на 2
+    // и затем вернет массив с результатом этих операций. Не использовать оператор if
+
+    public static int [] sumEverySecondNumber(Integer [] newSecondArrayNumbers){
+
+        int [] resultArray = new int [newSecondArrayNumbers.length / 2] ;
+        for (int i = 0, j = 0; i < newSecondArrayNumbers.length; i += 2, j ++) {
+
+            resultArray[j] = newSecondArrayNumbers[i] * 2;
+        }
+        return resultArray;
+    }
+
+    // Написать метод, который принимает в себя массив строк и из них возвращает одну большую строку, каждый элемент в
+    // результирующей строке отделяется от предыдущего запятой
+
 }

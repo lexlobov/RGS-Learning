@@ -33,13 +33,28 @@ public class Main {
 
         }
 
-        double [] resultMassive = Homework.convertIntToDouble(newArrayNumbers);
-        System.out.println(Arrays.toString(resultMassive));
+        double [] resultArray = Homework.convertIntToDouble(newArrayNumbers);
+        System.out.println(Arrays.toString(resultArray));
 
 
 
         // Написать метод, который будет принимать в себя массив целых чисел в качестве аргумента, каждый второй элемент этого массива умножать на 2
         // и затем вернет массив с результатом этих операций. Не использовать оператор if
+
+        System.out.println("Enter length of your array: ");
+        int newSecondArrayLength = scanner.nextInt();
+
+        System.out.println("Enter your numbers: ");
+        Integer [] newSecondArrayNumbers = new Integer[newSecondArrayLength];
+        for (int i = 0; i < newSecondArrayLength; i++) {
+
+            newSecondArrayNumbers[i] = scanner.nextInt();
+
+        }
+
+        int [] sumResultArray = Homework.sumEverySecondNumber(newSecondArrayNumbers);
+        System.out.println(Arrays.toString(sumResultArray));
+
 
 
         // Написать метод, который принимает в себя массив строк и из них возвращает одну большую строку, каждый элемент в
