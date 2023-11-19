@@ -2,6 +2,7 @@ package ru.sberhealth.rgs;
 
 import java.lang.annotation.Documented;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -101,7 +102,24 @@ public class Main {
         System.out.println(resultString);
 
 
+        // Task 5
         // Написать метод, который принимает в себя в качестве аргумента массив любых объектов, разворачивает его в обратном порядке
         // (первый элемент становится последним, последний элемент становится первым) и возвращает
+
+        System.out.println("Enter length of your array: ");
+        int objectsArrayLength = scanner.nextInt();
+
+        System.out.println("Enter your stuff: ");
+        Object[] newObjectArray = new Object[objectsArrayLength];
+        for (int i = 0; i < objectsArrayLength; i++) {
+
+            newObjectArray[i] = scanner.next();
+        }
+
+        Object [] resultObjectString = Homework.reverseObjectArray(newObjectArray);
+        String objectArrayToString = Arrays.toString(resultObjectString);
+        System.out.println(objectArrayToString);
+
+
     }
 }

@@ -1,7 +1,7 @@
 package ru.sberhealth.rgs;
 
-import java.util.Arrays;
 import java.util.StringJoiner;
+
 
 public class Homework {
 
@@ -34,7 +34,6 @@ public class Homework {
             resultMassive[i] = newArrayNumbers[i].doubleValue();
 
         }
-        ;
         return (resultMassive);
     }
 
@@ -69,6 +68,14 @@ public class Homework {
         }
 
         return joiner.toString();
+    }
+
+
+    // Написать метод, который принимает в себя в качестве аргумента массив любых объектов, разворачивает его в обратном порядке
+    // (первый элемент становится последним, последний элемент становится первым) и возвращает
+
+    public static Object [] reverseObjectArray(Object [] newStringArray){
+        return ArrayReverse.reverseArray(newStringArray);
     }
 
 }
