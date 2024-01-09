@@ -1,5 +1,7 @@
 package ru.sberhealth.rgs;
 
+import ru.sberhealth.rgs.abstarct.Vehicle;
+
 import java.util.ArrayList;
 import java.util.List;
 
