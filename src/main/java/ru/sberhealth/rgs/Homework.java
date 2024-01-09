@@ -1,5 +1,7 @@
 package ru.sberhealth.rgs;
 
+import java.util.StringJoiner;
+
 public class Homework {
 
     // Все методы написать в этом классе, вызывать в классе Main в методе main
@@ -47,8 +49,29 @@ public class Homework {
     // Написать метод, который принимает в себя массив строк и из них возвращает одну большую строку, каждый элемент в
     // результирующей строке отделяется от предыдущего запятой
 
+    public static String joinStrings(String[] strings) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < strings.length; i++) {
+            builder.append(strings[i]);
+            if (i < strings.length - 1) {
+                builder.append(", ");
+            }
+        }
+        return builder.toString();
+    }
+
     // Написать метод, который принимает в себя в качестве аргумента массив любых объектов, разворачивает его в обратном порядке
     // (первый элемент становится последним, последний элемент становится первым) и возвращает
+
+    public static <T> T[] reverseArray(T[] array) {
+        int length = array.length;
+        for (int i = 0; i < length / 2; i++) {
+            T temp = array[i];
+            array[i] = array[length - 1 - i];
+            array[length - 1 - i] = temp;
+        }
+        return array;
+    }
 
 
 }
