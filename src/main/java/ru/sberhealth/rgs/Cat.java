@@ -6,6 +6,10 @@ public class Cat extends Animal{
         super(name, numberOfPaws);
     }
 
+    public Cat(String name){
+        super(name, 4);
+    }
+
     private String typeOfFur;
 
     @Override
