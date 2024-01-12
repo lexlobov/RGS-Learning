@@ -1,6 +1,6 @@
 package ru.sberhealth.rgs;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +18,10 @@ public class Main {
         }else
             System.out.println(number + " This is NOT the palindrome");
 
-    }
 
+        String romanNumber = "IX";
+        RomaRomaRoman romaRomaRoman = new RomaRomaRoman();
+        int result = romaRomaRoman.arabicToRomanNumbers(romanNumber);
+        System.out.println(result);
+    }
 }
