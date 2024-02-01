@@ -1,6 +1,29 @@
 package ru.sberhealth.rgs;
 
 public class Main {
+
+    public static void main(String[] args) {
+
+        Garage garage = new Garage();
+
+        Boat boat = new Boat("Sobol", "2015");
+        Boat boat2 = new Boat("Drakkar-2", "613");
+        Truck truck = new Truck("MAZ", "2022");
+        Truck truck2 = new Truck("KAMAZ T1", "1988");
+        Plane plane = new Plane("TU-2", "1940");
+        Plane plane2 = new Plane("SU-24", "1977");
+
+        garage.addNewVehicleToGarage(boat);
+        garage.addNewVehicleToGarage(truck);
+        garage.addNewVehicleToGarage(plane);
+        garage.addNewVehicleToGarage(plane2);
+
+        garage.drive(boat2);
+        garage.stop(truck2);
+
+
+    }
+
 }
 
 /*
