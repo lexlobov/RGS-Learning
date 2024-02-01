@@ -32,14 +32,18 @@ public class Garage {
 
         // Создаем словарь vehicleCount где ключами являются классы транспортных средств,
         // а значениями Integer - их кол-во для каждого класса
+
         Map<Class<? extends Vehicle>, Integer> vehicleCount = new HashMap<>();
 
 
         for (Vehicle vehicle : garage){
+
             // Для каждого ТС получаем его класс
             Class<? extends Vehicle> vehicleClass = vehicle.getClass();
+
             // Проверяем, есть ли запись в словаре. Если записи нет, то возвращаем дефолт (0)
             int count = vehicleCount.getOrDefault(vehicleClass, 0);
+
             // Если есть, то int count = кол-во, что уже есть в словаре + 1
             // То есть если запись в словаре есть, то int count = n + 1 Если нет, то 0 вернем дефолтное
             // получившееся значение мы записываем в словарь vehicleCount
@@ -56,6 +60,7 @@ public class Garage {
         В sout мы используем getKey().getSimpleName() для получения и вывода имени класса, entry.getValue - для получения
         и вывода значения Integer из vehicleCount.entrySet()
         */
+
         for (Map.Entry<Class<? extends Vehicle>, Integer> entry : vehicleCount.entrySet()){
             System.out.println(entry.getKey().getSimpleName() + " " + entry.getValue() + ";");
         }
