@@ -21,7 +21,7 @@ public class Main {
         garage.drive(boat2);
         garage.stop(truck2);
 
-
+        garage.showVehiclesInTheGarage();
     }
 
 }
