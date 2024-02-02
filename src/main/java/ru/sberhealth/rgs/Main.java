@@ -14,11 +14,14 @@ public class Main {
         Plane plane2 = new Plane("SU-24", "1977");
 
         garage.addNewVehicleToGarage(boat);
+        garage.addNewVehicleToGarage(boat2);
         garage.addNewVehicleToGarage(truck);
+        garage.addNewVehicleToGarage(truck2);
         garage.addNewVehicleToGarage(plane);
         garage.addNewVehicleToGarage(plane2);
 
         garage.drive(boat2);
+        garage.drive(truck2);
         garage.stop(truck2);
 
         garage.showVehiclesInTheGarage();

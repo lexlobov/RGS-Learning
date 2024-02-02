@@ -20,10 +20,12 @@ public class Garage {
 
     public void drive(Vehicle vehicle) {
         vehicle.drive();
+        garage.remove(vehicle);
     }
 
     public void stop(Vehicle vehicle) {
         vehicle.stop();
+        garage.add(vehicle);
     }
 
     public void showVehiclesInTheGarage(){
