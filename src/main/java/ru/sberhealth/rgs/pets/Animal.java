@@ -10,11 +10,11 @@ public class Animal {
         this.numberOfPaws = numberOfPaws;
     }
 
-    protected void move(){
+    public void move(){
         System.out.println("Moves...");
     }
 
-    protected void makeSound(){
+    public void makeSound(){
         System.out.println("Sound...");
     }
 }
