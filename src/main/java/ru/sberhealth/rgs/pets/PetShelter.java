@@ -26,7 +26,10 @@ public class PetShelter {
     public Integer putNewPetInShelter(Animal animal){
         pets.add(animal);
         System.out.printf("New %s with name %s has entered our shelter%n", animal.getClass().getSimpleName(), animal.name);
-        System.out.printf("There are %s pets currently in the shelter%n", pets.indexOf(animal));
+
+        // тут логический косяк. Нам возвращается индекс. если у нас 1 животное, то в дефолтном варианте вернется There are 0 pets currently in the shelter.
+        // Типо нет животных. По факту они есть (хотя может это был хитрый план)
+        System.out.printf("There are %s pets currently in the shelter%n", pets.indexOf(animal) + 1);
         return pets.indexOf(animal);
     }
 }

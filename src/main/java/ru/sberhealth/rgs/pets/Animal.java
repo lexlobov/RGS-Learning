@@ -10,6 +10,10 @@ public class Animal {
         this.numberOfPaws = numberOfPaws;
     }
 
+    public String getPetName(){
+        return this.name = name;
+    }
+
     public void move(){
         System.out.println("Moves...");
     }
