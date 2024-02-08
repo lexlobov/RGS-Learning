@@ -126,9 +126,59 @@ public class PetShelterTests {
 
         assertThat(pets, hasSize(1));
         assertThat(outputStream.toString().trim(), equalTo("no such pet in the shelter"));
-
-
     }
 
+    @Test
+    @DisplayName("Проверка, текста ошибки, если приютить новую зверушку")
+    public void adoptNewAnimalInsideShelterTest(){
+
+        Animal dog = new Cat("cat", 4);
+
+        petShelter.putNewPetInShelter(dog);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        System.setOut(printStream);
+
+        petShelter.adopt(dog);
+
+        assertThat(outputStream.toString().trim(), equalTo(dog.getPetName() + " has been adopted"));
+    }
+
+    @Test
+    @DisplayName("Проверка, что при адоптации возвращается корректный размер приюта")
+    public void adoptCheckShelterSizeTest(){
+
+        Animal cat = new Dog("cat", 4);
+        Animal dog = new Cat("dog", 4);
+
+        petShelter.putNewPetInShelter(dog);
+        petShelter.putNewPetInShelter(cat);
+        int ShelterSize = petShelter.adopt(dog);
+
+        assertThat(ShelterSize, equalTo(1));
+    }
+
+    @Test
+    @DisplayName("Проверка корректности счета в тексте с кол-вом животных в приюте")
+    public void putNewPetInTheShelterNumOfPetsTest(){
+
+        Animal cat = new Dog("cat", 4);
+        Animal dog = new Cat("dog", 4);
+        Animal petukh = new Cat("kurochka", 2);
+
+        petShelter.putNewPetInShelter(dog);
+        petShelter.putNewPetInShelter(cat);
+
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        System.setOut(printStream);
+
+        petShelter.putNewPetInShelter(petukh);
+
+        assertThat(outputStream.toString().trim(), containsString("New " + petukh.getClass().getSimpleName() + " with name " + petukh.getPetName() + " has entered our shelter " +
+                "There are " + pets.size() + " pets currently in the shelter"));
+    }
 
 }
